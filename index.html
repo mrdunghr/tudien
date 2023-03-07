@@ -16,20 +16,17 @@
         let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
         let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
         let string = document.getElementById("string").value;
-        let index_eng = 0;
         let result = "";
-        for (let i = 0; i <= arr_eng.length; i++) { //chạy từ i tới độ dài của mảng bằng 6
-            if (string == arr_eng[i]) { //nếu value giống phần tử mảng thì thỏa mãn
-                index_eng = i; //gán index là phần tử thứ mấy
-                for (let j = 0; j < arr_vie.length; j++) { //chạy từ j tới chiều dài mảng tiếng việt = 6
-                    if (index_eng = j) { //nếu index eng = j thì thỏa mãn
-                        result = arr_vie[j]; //gán kết quả vào biến result
-                        break;
+        for(let i = 0; i <= arr_eng.length; i++){
+            if (arr_eng[i] == string){
+                for (let j = 0; j <=arr_vie.length; j++){
+                    if (j == i){
+                        document.getElementById('result').innerHTML = arr_vie[i];
                     }
                 }
             }
         }
-        document.getElementById('result').innerHTML = result;
+
     }
 </script>
 </html>
